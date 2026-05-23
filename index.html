@@ -1,0 +1,52 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta
+      name="description"
+      content="This web is solution for frontend-assessment"
+    />
+
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&family=Roboto:wght@400&display=swap"
+      rel="stylesheet"
+      media="print"
+      onload="this.media = 'all'"
+    />
+    <noscript>
+      <link
+        href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&family=Roboto:wght@400&display=swap"
+        rel="stylesheet"
+      />
+    </noscript>
+
+    <!-- Preload LCP image for mobile -->
+    <link
+      rel="preload"
+      href="/banners/banner_mobile.webp"
+      as="image"
+      media="(max-width: 1023px)"
+      fetchpriority="high"
+    />
+    <!-- Preload LCP image for desktop -->
+    <link
+      rel="preload"
+      href="/banners/banner_desktop.webp"
+      as="image"
+      media="(min-width: 1024px)"
+      fetchpriority="high"
+    />
+
+    <title>frontend-assessment</title>
+  </head>
+  <body>
+    <div id="root"></div>
+    <script type="module" src="/src/main.jsx"></script>
+  </body>
+</html>
+

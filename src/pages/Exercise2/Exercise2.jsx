@@ -1,0 +1,35 @@
+import { Helmet } from "react-helmet-async";
+import AccordionList from "../../components/AccordionList";
+import BackButton from "../../components/BackButton";
+import TabList from "../../components/TabList";
+import { useMediaQuery } from "../../hooks/useMediaQuery";
+import { useState } from "react";
+
+export default function Excercise2() {
+  const isMobile = useMediaQuery("(max-width: 1024px)");
+  const [selectedIndex, setSelectedIndex] = useState(0);
+
+  return (
+    <>
+      <Helmet>
+        <title>Exercise 2 | Frontend Assessment</title>
+        <meta name="description" content="Exercise 2 of Frontend Assessment" />
+        <link
+          rel="canonical"
+          href="https://fascinating-tiramisu-8f7baa5.netlify.app/exercise2"
+        />
+      </Helmet>
+      <div className="relative">
+        <BackButton />
+        {isMobile ? (
+          <AccordionList
+            selectedIndex={selectedIndex}
+            onSelect={setSelectedIndex}
+          />
+        ) : (
+          <TabList selectedIndex={selectedIndex} onSelect={setSelectedIndex} />
+        )}
+      </div>
+    </>
+  );
+}
