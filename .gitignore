@@ -34,6 +34,7 @@
 .Spotlight-V100
 .Trashes
 Icon?
+!src/components/icons/
 ehthumbs.db
 Thumbs.db
 
